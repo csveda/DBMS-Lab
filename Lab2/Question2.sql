@@ -1,4 +1,4 @@
-//LAB2- QUESTION12
+--LAB2- QUESTION12
 
 1]  create table Emp( Eno INT(5) NOT NULL AUTO_INCREMENT PRIMARY KEY, Ename VARCHAR(10), Phone_no INT(10), Desg VARCHAR(10), salary INT(7), age INT(3),country VARCHAR(10));
 

@@ -1,4 +1,4 @@
-//LAB2- QUESTION1
+--LAB2- QUESTION1
 
 1]  create table Customers(CID INT(5) NOT NULL AUTO_INCREMENT PRIMARY KEY, cname VARCHAR(20), age INT(3), address  
     VARCHAR(20), city VARCHAR(10), postalcode INT(6),Gender VARCHAR(6), country VARCHAR(10));
