@@ -1,2 +1,2 @@
-# Database-Management-System-Lab
-Lab work done in dbms lab
+# DBMS - Lab
+DBMS Lab Queries
