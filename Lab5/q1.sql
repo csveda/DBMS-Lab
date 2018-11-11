@@ -34,7 +34,7 @@ select Employee_lab5.Office,Employee_lab5.EID,Employee_lab5.salary, currency_tab
 select e1.Fname,e1.Lname,e1.EID from Employee_lab5 as e1, Employee_lab5 as e2 where e1.Fname=e2.Fname and e1.EID!=e2.EID;
 
 --query3
-select trim(trailing ".com" from substring_index(email, '@', -1)) as mailservice, count(*) as count from employee 
+select trim(trailing ".com" from substring_index(email, '@', -1)) as mailservice, count(*) as count from Employee_lab5
            group by trim(trailing ".com" from substring_index(email, '@', -1)) having count>1;
 
 
