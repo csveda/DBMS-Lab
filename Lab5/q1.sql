@@ -45,4 +45,5 @@ select salary-(0.05*salary) as Deduction, bonus+(salary-(0.05*salary)) as Final_
 select * from Employee_lab5 order by salary desc lname asc;
 
 --query6
-select Dno from Employee_lab group by Dno 
+select a.dno from (select dno,count(bonus) as bonus_count from Employee_lab5 where bonus!=0  group by (dno))  as a where a.bonus_count >1;
+
