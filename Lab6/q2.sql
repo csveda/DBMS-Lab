@@ -82,9 +82,9 @@ insert into rating  (mov_id, Rev_stars,Reviewer_name) values
 select mov_title from movies,director where movies.dir_id = director.dir_id and director.dir_name="michael";
 
 --query2
- select distinct(mov_title) from movies,movie_cast where 
-                         movies.mov_id = movie_cast.mov_id and movie_cast.act_id in 
-                         (select act_id from movie_cast group by act_id having count(mov_id)>=2);
+select  distinct mov_title from movie_cast, movies, 
+                (select act_id, count(act_id) as movie_count from movie_cast group by (act_id) ) as tbl 
+		where movie_cast.mov_id = movies.mov_id and m ovie_cast.act_id = tbl.act_id and movie_count > 1;
 
 --query3
 select distinct(actor.act_name) from movie_cast,movies,actor where movie_cast.mov_id = movies.mov_id and (mov_year<2010 or mov_year>2017) and actor.act_id = movie_cast.act_id;
